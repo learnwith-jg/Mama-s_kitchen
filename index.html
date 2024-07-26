@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama's Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Existing CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+        header {
+            background-color: white;
+            border-bottom: 2px solid red;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+        }
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        footer {
+            background-color: white;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 2px solid red;
+        }
+        #contact p {
+            margin: 5px 0;
+        }
+        #cart {
+            padding: 20px;
+            background-color: white;
+            border: 2px solid red;
+            margin-top: 20px;
+        }
+        #cart h2 {
+            margin: 0 0 10px;
+        }
+        #cart p {
+            margin: 5px 0;
+        }
+        #cart button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #cart button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+               <img src="logo.jfif" alt="Mama's Kitchen" style="width: 200px; height: 200px;">
+
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home">
+                                   <h1>Mama's Kitchen</h1>
+        <p>Welcome to Mama's Kitchen! Enjoy our delicious menu items made with love.</p>
+    </section>
+    
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="4.jfif" alt="Pulaw">
+                <h3>Pulaw</h3>
+                <p>Rs. 250</p>
+                <button onclick="addToCart('Pulaw', 250)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="3.jfif" alt="Biryani">
+                <h3>Biryani</h3>
+                <p>Rs. 300</p>
+                <button onclick="addToCart('Biryani', 300)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="7.jfif" alt="Channa Chaat">
+                <h3>Channa Chaat</h3>
+                <p>Rs. 250</p>
+                <button onclick="addToCart('Channa Chaat', 250)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="8.jfif" alt="Cream Chaat">
+                <h3>Cream Chaat</h3>
+                <p>Rs. 250</p>
+                <button onclick="addToCart('Cream Chaat', 250)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="9.jfif" alt="Fruit Chaat">
+                <h3>Fruit Chaat</h3>
+                <p>Rs. 300</p>
+                <button onclick="addToCart('Fruit Chaat', 300)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="10.jfif" alt="Dhahi Phulkiyan">
+                <h3>Dhahi Phulkiyan</h3>
+                <p>Rs. 150</p>
+                <button onclick="addToCart('Dhahi Phulkiyan', 150)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="5.jfif" alt="Simple Pasta">
+                <h3>Simple Pasta</h3>
+                <p>Rs. 300</p>
+                <button onclick="addToCart('Simple Pasta', 300)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="2.jpg" alt="White Sauce Pasta">
+                <h3>White Sauce Pasta</h3>
+                <p>Rs. 350</p>
+                <button onclick="addToCart('White Sauce Pasta', 350)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="11.jfif" alt="Masala Macaroni">
+                <h3>Masala Macaroni</h3>
+                <p>Rs. 250</p>
+                <button onclick="addToCart('Masala Macaroni', 250)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="12.jfif" alt="Sandwich Cakes">
+                <h3>Sandwich Cakes</h3>
+                <p>10 pieces for Rs. 300</p>
+                <button onclick="addToCart('Sandwich Cakes - 10 pieces', 300)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="6.jpg" alt="Nuggets">
+                <h3>Nuggets</h3>
+                <p>10 pieces for Rs. 350</p>
+                <button onclick="addToCart('Nuggets - 10 pieces', 350)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="13.jfif" alt="Vegetable Samosa">
+                <h3>Vegetable Samosa</h3>
+                <p>10 pieces for Rs. 250</p>
+                <button onclick="addToCart('Vegetable Samosa - 10 pieces', 250)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="5.jfif" alt="Chow Min">
+                <h3>Chow Min</h3>
+                <p>Rs. 450</p>
+                <button onclick="addToCart('Chow Min', 450)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="14.jfif" alt="Pakoray">
+                <h3>Pakoray</h3>
+                <p>Rs. 150 per plate</p>
+                <button onclick="addToCart('Pakoray - Plate', 150)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="1.jfif" alt="Donuts">
+                <h3>Donuts</h3>
+                <p>6 pieces for Rs. 300</p>
+                <button onclick="addToCart('Donuts - 6 pieces', 300)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="15.jfif" alt="Momos">
+                <h3>Momos</h3>
+                <p>6 pieces for Rs. 350</p>
+                <button onclick="addToCart('Momos - 6 pieces', 350)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@mamaskitchen.com</p>
+        <p>Phone: +923405937345</p> 
+		<p>Phone: +923087192390</p> 
+    </section>
+    
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Items will be dynamically added here -->
+        </ul>
+        <p>Total Price: <span id="total-price"></span></p>
+        <p>Delivery Charges: Rs. 150</p>
+        <p>Final Total: <span id="final-total"></span></p>
+        <button onclick="confirmOrder()">To Confirm Your Order</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Mama's Kitchen</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
